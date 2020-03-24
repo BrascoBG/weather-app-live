@@ -1,3 +1,15 @@
+# Single Page Weather App
+
+It's a React SPA. 
+
+It's showing data from JSON file fetched from API.
+
+Just enter a city from all over the world in the input.
+
+All pictures are different depending from the weather conditions.
+
+Enjoy! 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

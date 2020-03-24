@@ -1,0 +1,68 @@
+import React from 'react';
+import sunny from './../assets/sunny.png';
+//import moon from './../assets/moon.png';
+import cloudy from './../assets/cloudy.png';
+import drizzle from "./../assets/drizzle.png";
+import showers from "./../assets/showers.png";
+import snowy from "./../assets/snowy.png";
+import thunder from './../assets/thunder.png';
+import stormy from './../assets/stormy.png';
+
+function WeatherApp(props){
+    const day = props.date.getDay();
+    const date = props.date.getDate();
+    const month = props.date.getMonth();
+    const year = props.date.getUTCFullYear();
+    const displayMonth = month === 1 ? "January" : month === 2 ? "February" : month === 3 ? "March" : month === 4 ? "April" : month === 5 ? "May" : month === 6 ? "June" : month === 7 ? "July" : month === 8 ? "August" : month === 9 ? "September" : month === 10 ? "October" : month === 11 ? "November" : month === 12 ? "December" : "";
+    const displayDay = day === 1 ? "Monday" : day === 2 ? "Tuesday" : day === 3 ? "Wednesday" : day === 4 ? "Thursday" : day === 5 ? 'Friday' : day === 6 ? "Saturday" : day === 7 ? "Sunday" : "";
+    return(
+        <div className="body-warm">
+            <div className= {props.weatherData.cod === "200" ? props.weatherData.list[0].main.temp < 0 ? "body-minus" : props.weatherData.list[0].main.temp < 10 ? "body-cold" : props.weatherData.list[0].main.temp < 30 ? "body-warm" : props.weatherData.list[0].main.temp >= 30 ? "body-hot" : "" : ""}>
+                <main className="main">
+                    <div className="data">
+                        <input type="text" 
+                            placeholder="Search..." 
+                            name="name" 
+                            value={props.city} 
+                            onChange={props.setState} 
+                            onKeyPress={props.handleEvent}
+                        />
+                        {props.weatherData.cod === "200" ? 
+                            <React.Fragment>
+                                <div className="today">
+                                <h1>{props.weatherData.list[0].name}, {props.weatherData.list[0].sys.country}</h1>
+                                    <div className="todayDay">
+                                        <p>{displayDay} {date} {displayMonth} {year}</p>
+                                    </div>
+                                </div>
+                                <div className="temp">
+                                    <div>
+                                        <img alt="Condition" src={props.weatherData.cod === "200" ? 
+                                            props.weatherData.list[0].weather[0].id >= 200 && props.weatherData.list[0].weather[0].id <= 232 ? thunder : 
+                                            props.weatherData.list[0].weather[0].id >= 300 && props.weatherData.list[0].weather[0].id <= 321 ? drizzle :
+                                            props.weatherData.list[0].weather[0].id >= 500 && props.weatherData.list[0].weather[0].id <= 531 ? showers :
+                                            props.weatherData.list[0].weather[0].id >= 600 && props.weatherData.list[0].weather[0].id <= 622 ? snowy :
+                                            props.weatherData.list[0].weather[0].id >= 701 && props.weatherData.list[0].weather[0].id <= 781 ? stormy :
+                                            props.weatherData.list[0].weather[0].id = 800  ? sunny :
+                                            props.weatherData.list[0].weather[0].id >= 801 && props.weatherData.list[0].weather[0].id <= 804 ? cloudy : ""
+                                            : "" } 
+                                        />
+                                        <h2>{Math.round(props.weatherData.list[0].main.temp)}&#176;c</h2> 
+                                    </div>
+                                    <div>
+                                        <p>Conditions: <br/> {props.weatherData.list[0].weather[0].description}</p>
+                                        <p>Feels like: {Math.round(props.weatherData.list[0].main.feels_like)}&#176;c </p>
+                                        <p>Humidity: {props.weatherData.list[0].main.humidity}%</p>
+                                        <p>Wind: {props.weatherData.list[0].wind.speed} km/h</p>
+                                    </div>
+                                </div>
+                            </React.Fragment>
+                        : ""}
+                    </div>
+                </main>
+            </div>
+        </div>
+    )
+}
+
+export default WeatherApp;
