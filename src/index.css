@@ -88,3 +88,8 @@
   .sunny{
     background-image: url(./assets/sunny.png);
   }
+  @media only screen and (max-width: 500px){
+      .temp{
+          width: 350px;
+      }
+  }
