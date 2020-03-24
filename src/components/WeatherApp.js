@@ -50,10 +50,10 @@ function WeatherApp(props){
                                         <h2>{Math.round(props.weatherData.list[0].main.temp)}&#176;c</h2> 
                                     </div>
                                     <div>
-                                        <p>Conditions: <br/> {props.weatherData.list[0].weather[0].description}</p>
-                                        <p>Feels like: {Math.round(props.weatherData.list[0].main.feels_like)}&#176;c </p>
-                                        <p>Humidity: {props.weatherData.list[0].main.humidity}%</p>
-                                        <p>Wind: {props.weatherData.list[0].wind.speed} km/h</p>
+                                        <p>Conditions: <br/> <strong>{props.weatherData.list[0].weather[0].description} </strong></p>
+                                        <p>Feels like: <strong>{Math.round(props.weatherData.list[0].main.feels_like)}&#176;c</strong> </p>
+                                        <p>Humidity: <strong>{props.weatherData.list[0].main.humidity}%</strong></p>
+                                        <p>Wind: <strong>{props.weatherData.list[0].wind.speed} km/h</strong></p>
                                     </div>
                                 </div>
                             </React.Fragment>
