@@ -27,10 +27,10 @@ function WeatherApp(props){
                             onChange={props.setState} 
                             onKeyPress={props.handleEvent}
                         />
-                        {props.weatherData.cod === "200" ? 
+                        {props.weatherData.cod === "200" ?
                             <React.Fragment>
                                 <div className="today">
-                                <h1>{props.weatherData.list[0].name}, {props.weatherData.list[0].sys.country}</h1>
+                                <h1>{props.loading ? "loading..." : props.weatherData.list[0].name}, {props.weatherData.list[0].sys.country}</h1>
                                     <div className="todayDay">
                                         <p>{displayDay} {date} {displayMonth} {year}</p>
                                     </div>
@@ -50,7 +50,8 @@ function WeatherApp(props){
                                         <h2>{Math.round(props.weatherData.list[0].main.temp)}&#176;c</h2> 
                                     </div>
                                     <div>
-                                        <p>Conditions: <br/> <strong>{props.weatherData.list[0].weather[0].description} </strong></p>
+                                        <h3><strong>{props.loading ? "loading..." : props.weatherData.list[0].weather[0].main} </strong></h3>
+                                        <br/>
                                         <p>Feels like: <strong>{Math.round(props.weatherData.list[0].main.feels_like)}&#176;c</strong> </p>
                                         <p>Humidity: <strong>{props.weatherData.list[0].main.humidity}%</strong></p>
                                         <p>Wind: <strong>{props.weatherData.list[0].wind.speed} km/h</strong></p>
