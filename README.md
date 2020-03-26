@@ -6,7 +6,7 @@ It's showing data from JSON file fetched from API.
 
 Just enter a city from all over the world in the input.
 
-All pictures are different depending from the weather conditions.
+Different pictures depending from the weather conditions.
 
 Enjoy! 
 
