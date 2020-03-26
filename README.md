@@ -10,6 +10,8 @@ All pictures are different depending from the weather conditions.
 
 Enjoy! 
 
+![Weather-App](https://github.com/BrascoBG/React-WeatherApp/blob/master/src/assets/WeatherApp.jpg?raw=true)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
