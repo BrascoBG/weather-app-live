@@ -43,7 +43,7 @@ function WeatherApp(props){
                                             props.weatherData.list[0].weather[0].id >= 500 && props.weatherData.list[0].weather[0].id <= 531 ? showers :
                                             props.weatherData.list[0].weather[0].id >= 600 && props.weatherData.list[0].weather[0].id <= 622 ? snowy :
                                             props.weatherData.list[0].weather[0].id >= 701 && props.weatherData.list[0].weather[0].id <= 781 ? stormy :
-                                            props.weatherData.list[0].clouds.all > 80 ? cloudy :
+                                            props.weatherData.list[0].clouds.all > 30 ? cloudy :
                                             props.weatherData.list[0].weather[0].id = 800  ? sunny :
                                              ""
                                             : "" } 

@@ -22,7 +22,6 @@ class App extends React.Component{
           weatherData: data,
           loading: false
         })
-        console.log(this.state.weatherData)
       })
     }
   }
