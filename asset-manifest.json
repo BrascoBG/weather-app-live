@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/weather-app-live/static/css/main.c48d127e.chunk.css",
+    "main.js": "/weather-app-live/static/js/main.e0ff7a2b.chunk.js",
+    "main.js.map": "/weather-app-live/static/js/main.e0ff7a2b.chunk.js.map",
+    "runtime-main.js": "/weather-app-live/static/js/runtime-main.912e9b7f.js",
+    "runtime-main.js.map": "/weather-app-live/static/js/runtime-main.912e9b7f.js.map",
+    "static/js/2.d2299993.chunk.js": "/weather-app-live/static/js/2.d2299993.chunk.js",
+    "static/js/2.d2299993.chunk.js.map": "/weather-app-live/static/js/2.d2299993.chunk.js.map",
+    "index.html": "/weather-app-live/index.html",
+    "precache-manifest.137a91241dffaaa494ce7716e056333e.js": "/weather-app-live/precache-manifest.137a91241dffaaa494ce7716e056333e.js",
+    "service-worker.js": "/weather-app-live/service-worker.js",
+    "static/css/main.c48d127e.chunk.css.map": "/weather-app-live/static/css/main.c48d127e.chunk.css.map",
+    "static/js/2.d2299993.chunk.js.LICENSE.txt": "/weather-app-live/static/js/2.d2299993.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/weather-app-live/static/media/warm.2f66212c.jpg",
+    "static/media/drizzle.png": "/weather-app-live/static/media/drizzle.0aece8e8.png",
+    "static/media/stormy.png": "/weather-app-live/static/media/stormy.9e6b27b6.png",
+    "static/media/thunder.png": "/weather-app-live/static/media/thunder.6303f2d8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.912e9b7f.js",
+    "static/js/2.d2299993.chunk.js",
+    "static/css/main.c48d127e.chunk.css",
+    "static/js/main.e0ff7a2b.chunk.js"
+  ]
+}
