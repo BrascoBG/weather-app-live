@@ -1,7 +1,6 @@
 {
   "name": "weather-app",
   "version": "0.1.1",
-  "private": true,
   "homepage": "https://BrascoBG.github.io/weather-app-live",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
