@@ -61,6 +61,7 @@ function WeatherApp(props){
                             </React.Fragment>
                         : ""}
                     </div>
+                    <a href="https://github.com/BrascoBG/React-WeatherApp" target="_blank" rel="noopener noreferrer" className="code-check">Code Here</a>
                 </main>
             </div>
         </div>
